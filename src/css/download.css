@@ -1,0 +1,16 @@
+.main-container{
+    width: 100%;
+}
+
+.text-container {
+    height: 300px;
+    overflow: scroll;
+    overflow-wrap: break-word;
+    width: 150px;
+}
+
+@media screen and (min-width:426px) {
+    .text-container{
+        width: 200px;
+    }
+}
