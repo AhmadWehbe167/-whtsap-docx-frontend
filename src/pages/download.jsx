@@ -20,7 +20,7 @@ class Download extends Component {
       text: this.state.text,
     };
     this.setState({ process: "processing..." });
-    await axios.post("http://localhost:8000/create_file", data).then(() => {
+    await axios.post("https://whtsap-docx.herokuapp.com/create_file", data).then(() => {
       console.log("processing completed!");
       this.setState({ process: "Done!", processColor: "bg-success" });
     });
@@ -29,7 +29,7 @@ class Download extends Component {
   downloadFile = async () => {
     this.setState({download:"Downloading..."});
     await axios
-      .get("http://localhost:8000/generated_file", {
+      .get("https://whtsap-docx.herokuapp.com/generated_file", {
         responseType: "blob",
       })
       .then((res) => {
